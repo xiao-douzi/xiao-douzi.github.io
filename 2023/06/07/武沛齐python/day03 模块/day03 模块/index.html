@@ -1,0 +1,1169 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="XIN">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="day03 模块课程回顾：  python基础 函数  今日概要：  模块 123- db.py- excel.py- app.py   自定义模块  内置模块 123import randomnum &#x3D; random.randint(10,99)  第三方模块 12- 下载- 使用    1.自定义模块1.1 模块和包 模块，py文件 包，文件夹   1.2 导入问题1.2.1 路径1impor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XIN">
+<meta property="og:url" content="http://example.com/2023/06/07/%E6%AD%A6%E6%B2%9B%E9%BD%90python/day03%20%E6%A8%A1%E5%9D%97/day03%20%E6%A8%A1%E5%9D%97/index.html">
+<meta property="og:site_name" content="XIN">
+<meta property="og:description" content="day03 模块课程回顾：  python基础 函数  今日概要：  模块 123- db.py- excel.py- app.py   自定义模块  内置模块 123import randomnum &#x3D; random.randint(10,99)  第三方模块 12- 下载- 使用    1.自定义模块1.1 模块和包 模块，py文件 包，文件夹   1.2 导入问题1.2.1 路径1impor">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/assets/image-20220414091527285.png">
+<meta property="og:image" content="http://example.com/assets/image-20220414094813430.png">
+<meta property="og:image" content="http://example.com/assets/image-20220414100350100.png">
+<meta property="og:image" content="http://example.com/assets/image-20220414102637310.png">
+<meta property="og:image" content="http://example.com/assets/image-20220414112949426.png">
+<meta property="og:image" content="http://example.com/assets/image-20220414151636581.png">
+<meta property="article:published_time" content="2023-06-07T05:16:18.194Z">
+<meta property="article:modified_time" content="2022-04-14T08:43:16.000Z">
+<meta property="article:author" content="XIN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/assets/image-20220414091527285.png">
+  
+  
+  
+  <title>XIN</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-06-07 13:16" pubdate>
+          2023年6月7日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          28k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          237 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="day03-模块"><a href="#day03-模块" class="headerlink" title="day03 模块"></a>day03 模块</h1><p>课程回顾：</p>
+<ul>
+<li>python基础</li>
+<li>函数</li>
+</ul>
+<p>今日概要：</p>
+<ul>
+<li><p>模块</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>db.py<br><span class="hljs-bullet">- </span>excel.py<br><span class="hljs-bullet">- </span>app.py<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>自定义模块</p>
+</li>
+<li><p>内置模块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><br>num = random.randint(<span class="hljs-number">10</span>,<span class="hljs-number">99</span>)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>第三方模块</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>下载<br><span class="hljs-bullet">- </span>使用<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-自定义模块"><a href="#1-自定义模块" class="headerlink" title="1.自定义模块"></a>1.自定义模块</h2><h3 id="1-1-模块和包"><a href="#1-1-模块和包" class="headerlink" title="1.1 模块和包"></a>1.1 模块和包</h3><ul>
+<li>模块，py文件</li>
+<li>包，文件夹</li>
+</ul>
+<p><img src="/assets/image-20220414091527285.png" srcset="/img/loading.gif" lazyload alt="image-20220414091527285"></p>
+<h3 id="1-2-导入问题"><a href="#1-2-导入问题" class="headerlink" title="1.2 导入问题"></a>1.2 导入问题</h3><h4 id="1-2-1-路径"><a href="#1-2-1-路径" class="headerlink" title="1.2.1 路径"></a>1.2.1 路径</h4><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> db<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight scheme"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs scheme">[<br> <span class="hljs-symbol">&#x27;/Users/wupeiqi/PycharmProjects/day03</span>&#x27;, <br> <span class="hljs-symbol">&#x27;/Library/Frameworks/Python.framework/Versions/3.9/lib/python39.zip</span>&#x27;,<br> <span class="hljs-symbol">&#x27;/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9</span>&#x27;,<br> <span class="hljs-symbol">&#x27;/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload</span>&#x27;,<br> <span class="hljs-symbol">&#x27;/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages</span>&#x27;,<br> <span class="hljs-symbol">&#x27;/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/requests-2.26.0-py3.9.egg</span>&#x27;,<br> <span class="hljs-symbol">&#x27;/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/charset_normalizer-2.0.7-py3.9.egg</span>&#x27;,<br> <span class="hljs-symbol">&#x27;/Applications/PyCharm.app/Contents/plugins/python/helpers/pycharm_matplotlib_backend</span>&#x27;<br>]<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="1-2-2-导入方式"><a href="#1-2-2-导入方式" class="headerlink" title="1.2.2 导入方式"></a>1.2.2 导入方式</h4><ul>
+<li><p>import ，一般用于导入当前py文件兄弟目录下的py文件。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">app</span>.py<br><span class="hljs-keyword">db</span>.py<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span> db<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>from xxx import ，文件和文件夹的嵌套</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># import utils.xx.helper</span><br><span class="hljs-comment"># data = utils.xx.helper.get_email()</span><br><span class="hljs-comment"># print(data)</span><br><br><span class="hljs-keyword">from</span> utils.xx <span class="hljs-keyword">import</span> helper<br>data = helper.get_email()<br><span class="hljs-built_in">print</span>(data)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>常见问题：</strong></p>
+<p>无论你的代码在哪层目录下，在导入模块时，一定要根据sys.path中的到模块的顺序来进行编写。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs vim">├── __pycache__<br>├── app.<span class="hljs-keyword">py</span><br>├── db.<span class="hljs-keyword">py</span><br>└── utils<br>    └── xx<br>        ├── excel.<span class="hljs-keyword">py</span><br>        └── helper.<span class="hljs-keyword">py</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight capnproto"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs capnproto"><span class="hljs-comment"># excel.py</span><br><br><span class="hljs-keyword">import</span> helper <span class="hljs-comment"># 错误</span><br><span class="hljs-keyword">from</span> utils.xx <span class="hljs-keyword">import</span> heler<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-3-主文件"><a href="#1-3-主文件" class="headerlink" title="1.3 主文件"></a>1.3 主文件</h3><blockquote>
+<p>主函数，程序运行时自定会执行的函数。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    <span class="hljs-keyword">pass</span><br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    run()<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li><p>运行程序时，导入模块，去哪里导入？</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">import sys<br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(sys.path)</span></span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>【优先】运行的当前py文件所在的目录<br><span class="hljs-bullet">- </span>【其次】python安装目录中找<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>主文件和其他文件的区分</p>
+<p><img src="/assets/image-20220414094813430.png" srcset="/img/loading.gif" lazyload alt="image-20220414094813430"></p>
+</li>
+<li><p>导入模块</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elm"><span class="hljs-keyword">import</span>          文件<br><span class="hljs-title">from</span> xx <span class="hljs-keyword">import</span>  文件夹/文件<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="2-第三方模块"><a href="#2-第三方模块" class="headerlink" title="2.第三方模块"></a>2.第三方模块</h2><blockquote>
+<p>别人写好的py文件或文件夹，我们要把它下载下来，然后在代码中进行使用。</p>
+</blockquote>
+<p>下载并安装第三方模块时，使用的工具:pip</p>
+<ul>
+<li><p>打开终端 或 Pycharm的Terminal</p>
+</li>
+<li><p>输入下载命令</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/Library/</span>Frameworks<span class="hljs-regexp">/Python.framework/</span>Versions<span class="hljs-regexp">/3.9/</span>bin/pip3.<span class="hljs-number">9</span>  install  requests<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">如果把Python安装目录加入到环境变量：<br>   <span class="hljs-regexp">/Library/</span>Frameworks<span class="hljs-regexp">/Python.framework/</span>Versions<span class="hljs-regexp">/3.9/</span>bin<br>以后再去安装第三方模块时，就不需要写前缀：<br>	pip3.<span class="hljs-number">9</span>  install  requests<br></code></pre></td></tr></table></figure>
+
+<p>win同学</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs markdown">C:\python39<br><span class="hljs-bullet">	-</span> Scripts<br><span class="hljs-bullet">		-</span> pip.exe<br><span class="hljs-bullet">		-</span> pip3.9.exe<br><span class="hljs-bullet">	-</span> Lib<br><span class="hljs-bullet">		-</span> site-packages<br><span class="hljs-bullet">			-</span> requests<br><span class="hljs-bullet">			-</span> openpyxl<br><span class="hljs-bullet">	-</span> python.exe<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">C:\python39\<span class="hljs-keyword">Scripts\pip </span> <span class="hljs-keyword">install </span>requests<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">把安装目录加入到环境变量<br>	C:\python39\<span class="hljs-keyword">Scripts</span><br><span class="hljs-keyword"></span>以后再去安装第三方模块时，就不需要写前缀：<br>	pip3.<span class="hljs-number">9</span>  <span class="hljs-keyword">install </span> requests<br></code></pre></td></tr></table></figure>
+
+<p><img src="/assets/image-20220414100350100.png" srcset="/img/loading.gif" lazyload alt="image-20220414100350100"></p>
+</li>
+</ul>
+<h3 id="2-1-pip的常见问题"><a href="#2-1-pip的常见问题" class="headerlink" title="2.1 pip的常见问题"></a>2.1 pip的常见问题</h3><ul>
+<li><p>pip更新的问题<br><img src="/assets/image-20220414102637310.png" srcset="/img/loading.gif" lazyload alt="image-20220414102637310"></p>
+</li>
+<li><p>下载慢，换成国内的源（豆瓣源）</p>
+<ul>
+<li><p>一次性的</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">pip install requests<br><br>pip install requests -i https:<span class="hljs-regexp">//</span>pypi.douban.com<span class="hljs-regexp">/simple/</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>永久配置</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 在终端执行如下命令</span><br>pip config set global.index-url https:<span class="hljs-regexp">//</span>pypi.douban.com<span class="hljs-regexp">/simple/</span><br><br><span class="hljs-comment"># 安装模块</span><br>pip install openpyxl<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<p>其他源：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">阿里云：http:<span class="hljs-regexp">//mi</span>rrors.aliyun.com<span class="hljs-regexp">/pypi/</span>simple/<br>中国科技大学：https:<span class="hljs-regexp">//</span>pypi.mirrors.ustc.edu.cn<span class="hljs-regexp">/simple/</span> <br>清华大学：https:<span class="hljs-regexp">//</span>pypi.tuna.tsinghua.edu.cn<span class="hljs-regexp">/simple/</span><br>中国科学技术大学：http:<span class="hljs-regexp">//</span>pypi.mirrors.ustc.edu.cn<span class="hljs-regexp">/simple/</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-2-源码安装"><a href="#2-2-源码安装" class="headerlink" title="2.2 源码安装"></a>2.2 源码安装</h3><ul>
+<li><p>下载源码包</p>
+</li>
+<li><p>解压</p>
+</li>
+<li><p>终端进入目录</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python3</span>.<span class="hljs-number">9</span> setup.<span class="hljs-keyword">py</span> build<br><span class="hljs-keyword">python3</span>.<span class="hljs-number">9</span> setup.<span class="hljs-keyword">py</span> install<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2-3-wheel包"><a href="#2-3-wheel包" class="headerlink" title="2.3 wheel包"></a>2.3 wheel包</h3><ul>
+<li><p>让自己的pip支持直接读取wheel包</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">pip3</span>.<span class="hljs-number">9</span> install wheel<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>pip就可以直接读取whl包并安装</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">pip3</span>.<span class="hljs-number">9</span> install requests2-<span class="hljs-number">2</span>.<span class="hljs-number">16</span>.<span class="hljs-number">0</span>-py2.py3-none-any.whl<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>注意：其他由于编译问题安装包不成功，可以尝试使用wheel 。</p>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ol>
+<li><p>接口的监测的功能。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br><span class="hljs-comment"># 返回的很多的内容</span><br>res = requests.get(<span class="hljs-string">&quot;https://api.luffycity.com/api/v1/course/actual/?limit=12&amp;offset=0&amp;category_id=9999&quot;</span>)<br><br><span class="hljs-comment"># 获取字符串类型</span><br><span class="hljs-comment"># print(res.text)</span><br><br><span class="hljs-comment"># 获取字符串类型-&gt;字典</span><br>data_dict = res.json()<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> data_dict[<span class="hljs-string">&quot;data&quot;</span>][<span class="hljs-string">&#x27;result&#x27;</span>]:<br>    <span class="hljs-built_in">print</span>(item[<span class="hljs-string">&#x27;name&#x27;</span>])<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>企业微信发送报警信息</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><span class="hljs-bullet">- </span>创建群<br><span class="hljs-bullet">- </span>机器人 + Hook网址<br><span class="hljs-bullet">- </span>向Hook网址发送请求<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br>web_hook_url = <span class="hljs-string">&#x27;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=e69fqwe3c-3572-4d7e-bbd9-34442c086e837&#x27;</span><br>res = requests.post(<br>    url=web_hook_url,<br>    json=&#123;<br>        <span class="hljs-string">&quot;msgtype&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>        <span class="hljs-string">&quot;text&quot;</span>: &#123;<br>            <span class="hljs-string">&quot;content&quot;</span>: <span class="hljs-string">&quot;xxxxx报警信息&quot;</span>,<br>            <span class="hljs-string">&quot;mentioned_list&quot;</span>: [<span class="hljs-string">&quot;@all&quot;</span>]<br>        &#125;<br>    &#125;<br><br>)<br>res.close()<br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>requests模块的作用？</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">帮助我们通过代码想某个地址发送请求（代替浏览器）。<br><span class="hljs-bullet">- </span>第一步：难点，分析整个请求。<br><span class="hljs-bullet">- </span>第二步：用代码实现分析的过程。<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><br>res = requests.post(<br>    url=<span class="hljs-string">&quot;https://api.luffycity.com/api/v1/auth/password/login/?loginWay=password&quot;</span>,<br>    json=&#123;<span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;alex&quot;</span>, <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;123123&quot;</span>&#125;<br>)<br><br><span class="hljs-comment"># token=用户凭证</span><br><span class="hljs-built_in">print</span>(res.text)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-内置模块"><a href="#3-内置模块" class="headerlink" title="3.内置模块"></a>3.内置模块</h2><p>Python内部为我们提供的功能。</p>
+<h3 id="3-1-hashlib"><a href="#3-1-hashlib" class="headerlink" title="3.1 hashlib"></a>3.1 hashlib</h3><p>可以对数据进行md5加密。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> hashlib<br><br>data_string = <span class="hljs-string">&quot;中国移动&quot;</span><br><br>obj = hashlib.md5()<br>obj.update(data_string.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>))<br>result = obj.hexdigest()<br><span class="hljs-built_in">print</span>(result)<br></code></pre></td></tr></table></figure>
+
+<p>有什么用呢？保存密码。</p>
+<ul>
+<li><p>用户注册</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> hashlib<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">encrypt</span>(<span class="hljs-params">data_string</span>):<br>    obj = hashlib.md5()<br>    obj.update(data_string.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>))<br>    result = obj.hexdigest()<br>    <span class="hljs-keyword">return</span> result<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    <span class="hljs-comment"># 提示用户输入用户名和密码</span><br>    user = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入用户：&quot;</span>)<br>    pwd = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入密码：&quot;</span>)<br>    password = encrypt(pwd)<br><br>    line = <span class="hljs-string">&quot;&#123;&#125;|&#123;&#125;\n&quot;</span>.<span class="hljs-built_in">format</span>(user, password)<br><br>    <span class="hljs-comment"># 保存数据库：连接、发送、保存</span><br>    <span class="hljs-comment"># 保存文件：打开文件、写入内容、关闭文件</span><br>    file_object = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;db.txt&quot;</span>, mode=<span class="hljs-string">&#x27;a&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>    file_object.write(line)<br>    file_object.close()<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    run()<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>用户登录</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs 1c">用户输入 用户名 <span class="hljs-meta">&amp; 密码（明文）</span><br><br>对密码进行md5加密<br><br>拿着 用户名+密码（密文）<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> hashlib<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">encrypt</span>(<span class="hljs-params">data_string</span>):<br>    obj = hashlib.md5()<br>    obj.update(data_string.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>))<br>    result = obj.hexdigest()<br>    <span class="hljs-keyword">return</span> result<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    <span class="hljs-comment"># 用户登录</span><br>    user = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入用户：&quot;</span>)<br>    pwd = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入密码：&quot;</span>)<br>    password = encrypt(pwd)<br><br>    <span class="hljs-comment"># 打开文件，读取内容，关闭文件</span><br>    file_object = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;db.txt&quot;</span>, mode=<span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>    data_string = file_object.read()<br>    file_object.close()<br><br>    data_list = data_string.strip().split(<span class="hljs-string">&#x27;\n&#x27;</span>)<br>    <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> data_list:<br>        name, passwd = item.split(<span class="hljs-string">&#x27;|&#x27;</span>)  <span class="hljs-comment"># [用户,密码]</span><br>        <span class="hljs-keyword">if</span> name == user <span class="hljs-keyword">and</span> password == passwd:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;登录成功&quot;</span>)<br>            <span class="hljs-keyword">break</span><br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    run()<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>md5进行加”盐”，本质上：加密时再加上我们自定义的字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> hashlib<br><br>data_string = <span class="hljs-string">&quot;admin&quot;</span><br><br>obj = hashlib.md5(<span class="hljs-string">&quot;asdfa99F99123ks@ldjlkjlksdf&quot;</span>.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>))<br>obj.update(data_string.encode(<span class="hljs-string">&#x27;utf-8&#x27;</span>))<br>result = obj.hexdigest()<br><br><span class="hljs-built_in">print</span>(result)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>建议：只要用md5加密，就要进行加盐。</p>
+<h3 id="3-2-json模块"><a href="#3-2-json模块" class="headerlink" title="3.2 json模块"></a>3.2 json模块</h3><p><img src="/assets/image-20220414112949426.png" srcset="/img/loading.gif" lazyload alt="image-20220414112949426"></p>
+<ul>
+<li><p>反序列化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br><br>data_string = <span class="hljs-string">&#x27;&#123;&quot;code&quot;:0,&quot;data&quot;:&#123;&quot;count&quot;:2,&quot;next&quot;:null,&quot;previous&quot;:null,&quot;result&quot;:[&#123;&quot;id&quot;:395,&quot;name&quot;:&quot;Word+PDF自动化办公&quot;,&quot;cover&quot;:&quot;//hcdn2.luffycity.com/media/frontend/course/%E5%88%97%E8%A1%A8%E5%9B%BE_s4ZkvP5.png&quot;,&quot;course_img&quot;:&quot;//hcdn2.luffycity.com/media/frontend/course/列表图_s4ZkvP5.png&quot;,&quot;hours&quot;:&quot;2&quot;,&quot;numbers&quot;:&quot;19&quot;,&quot;complete_numbers&quot;:19,&quot;course_slogan&quot;:&quot;Word+PDF自动化办公&quot;,&quot;learn_number&quot;:1007,&quot;first_section_id&quot;:null,&quot;teacher&quot;:&#123;&quot;id&quot;:32,&quot;image&quot;:&quot;//hcdn2.luffycity.com/media/frontend/activity/bo_1544078972.8352425.png&quot;,&quot;videos&quot;:[],&quot;name&quot;:&quot;波波&quot;,&quot;role&quot;:0,&quot;title&quot;:&quot;前百度数据挖掘工程师&quot;,&quot;signature&quot;:&quot;曾就职于百度，任爬虫开发工程师&quot;,&quot;brief&quot;:&quot;曾就职于百度，任爬虫开发工程师，擅长数据分析和爬虫技术，喜欢研究各种爬虫奇淫巧技，专治各种反爬取疑难杂症。&quot;&#125;,&quot;free_sections&quot;:[&#123;&quot;id&quot;:39668,&quot;name&quot;:&quot;Word自动化办公-写入指定样式的数据&quot;,&quot;free_trail&quot;:false&#125;,&#123;&quot;id&quot;:39681,&quot;name&quot;:&quot;PDF自动化办公-文档加密&quot;,&quot;free_trail&quot;:false&#125;,&#123;&quot;id&quot;:39664,&quot;name&quot;:&quot;Word自动化办公-环境安装介绍&quot;,&quot;free_trail&quot;:false&#125;,&#123;&quot;id&quot;:39669,&quot;name&quot;:&quot;Word自动化办公-单独设置文本样式&quot;,&quot;free_trail&quot;:false&#125;],&quot;payment_info&quot;:&#123;&quot;has_price&quot;:true,&quot;price&quot;:19.9,&quot;origin_price&quot;:59.0,&quot;valid_period&quot;:10000,&quot;is_promotion&quot;:true,&quot;promotion_name&quot;:&quot;限时折扣&quot;,&quot;promotion_price&quot;:&quot;19.90&quot;,&quot;promotion_end_date&quot;:&quot;2022-04-30 23:59:59&quot;&#125;,&quot;is_buy&quot;:false,&quot;is_new&quot;:true,&quot;learning_path_name&quot;:&quot;ai&quot;&#125;,&#123;&quot;id&quot;:396,&quot;name&quot;:&quot;Yuan老师带你深入浅出学Django&quot;,&quot;cover&quot;:&quot;//hcdn2.luffycity.com/media/frontend/course/%E5%88%97%E8%A1%A8%E5%9B%BE_q8n8F4H.png&quot;,&quot;course_img&quot;:&quot;//hcdn2.luffycity.com/media/frontend/course/列表图_q8n8F4H.png&quot;,&quot;hours&quot;:&quot;5&quot;,&quot;numbers&quot;:&quot;11&quot;,&quot;complete_numbers&quot;:34,&quot;course_slogan&quot;:&quot;Yuan老师带你深入浅出学Django&quot;,&quot;learn_number&quot;:1063,&quot;first_section_id&quot;:null,&quot;teacher&quot;:&#123;&quot;id&quot;:20,&quot;image&quot;:&quot;//hcdn2.luffycity.com/media/frontend/activity/yuanhao%403x_1517450106.3359919.png&quot;,&quot;videos&quot;:[&#123;&quot;title&quot;:&quot;web应用程序1&quot;,&quot;img&quot;:&quot;/static/frontend/degree_course_detail/苑昊-3_1533097716.7837143.jpeg&quot;,&quot;vid&quot;:&quot;ff0a0f81dae94a3a941d01b873eac9ab&quot;,&quot;video_time&quot;:&quot;19:02&quot;,&quot;play_count&quot;:654&#125;,&#123;&quot;title&quot;:&quot;django基础介绍&quot;,&quot;img&quot;:&quot;/static/frontend/degree_course_detail/苑昊-1_1533097717.4351325.jpeg&quot;,&quot;vid&quot;:&quot;3b9b08e1aa924fa8addb1ca771488c8a&quot;,&quot;video_time&quot;:&quot;09:30&quot;,&quot;play_count&quot;:456&#125;],&quot;name&quot;:&quot;Avrion&quot;,&quot;role&quot;:0,&quot;title&quot;:&quot;路飞学城高级讲师&quot;,&quot;signature&quot;:&quot;擅长Python开发/生物图像自动识别及处理技术&quot;,&quot;brief&quot;:&quot;路飞学城高级讲师，曾参与新加坡南洋理工大学大数据医疗相关项目，就职过多家互联网企业，有着多年开发经验，精通java,python,go等编程语言，Uric开源软件作者，致力于人工智能与大数据方向，对机器学习，深度学习等算法有深度研究。&quot;&#125;,&quot;free_sections&quot;:[&#123;&quot;id&quot;:39684,&quot;name&quot;:&quot;Django开篇&quot;,&quot;free_trail&quot;:false&#125;,&#123;&quot;id&quot;:40831,&quot;name&quot;:&quot;模板继承&quot;,&quot;free_trail&quot;:false&#125;,&#123;&quot;id&quot;:40838,&quot;name&quot;:&quot;django的查询API&quot;,&quot;free_trail&quot;:false&#125;,&#123;&quot;id&quot;:40849,&quot;name&quot;:&quot;图书管理系统案例&quot;,&quot;free_trail&quot;:false&#125;],&quot;payment_info&quot;:&#123;&quot;has_price&quot;:true,&quot;price&quot;:79.0,&quot;origin_price&quot;:399.0,&quot;valid_period&quot;:10000,&quot;is_promotion&quot;:true,&quot;promotion_name&quot;:&quot;限时折扣&quot;,&quot;promotion_price&quot;:&quot;79.00&quot;,&quot;promotion_end_date&quot;:&quot;2022-04-30 23:59:59&quot;&#125;,&quot;is_buy&quot;:false,&quot;is_new&quot;:true,&quot;learning_path_name&quot;:&quot;python&quot;&#125;]&#125;&#125;&#x27;</span><br><br><br>data_dict = json.loads(data_string)<br><span class="hljs-built_in">print</span>(data_dict)<br><span class="hljs-built_in">print</span>(data_dict[<span class="hljs-string">&#x27;code&#x27;</span>])<br><br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>序列化，python&#x3D;&gt;JSON格式的字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br><br>data_dict = &#123;<span class="hljs-string">&quot;k1&quot;</span>: <span class="hljs-number">123</span>, <span class="hljs-string">&quot;k2:&quot;</span>: <span class="hljs-number">456</span>, <span class="hljs-string">&#x27;k3&#x27;</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">&#x27;k4&#x27;</span>: [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">33</span>]&#125;<br><br>data_string = json.dumps(data_dict)<br><br><span class="hljs-built_in">print</span>(data_string)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>json是什么？是一个格式，字符串的形式存在。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">v1 = <span class="hljs-string">&quot;&#123;&#x27;k1&#x27;:123,&#x27;k2&#x27;:456&#125;&quot;</span>      -&gt;  是字符串   不是JSON格式<br>v2 = <span class="hljs-string">&#x27;&#123;&quot;k1&quot;:123,&quot;k2&quot;:456&#125;&#x27;</span>      -&gt;  是字符串   是JSON<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">v3 = <span class="hljs-string">&#x27;&#123;&quot;k1&quot;:123,&quot;k2&quot;:456,&quot;k3&quot;:True&#125;&#x27;</span>      -&gt;  是字符串   不是JSON格式<br>v4 = <span class="hljs-string">&#x27;&#123;&quot;k1&quot;:123,&quot;k2&quot;:456,&quot;k3&quot;:true&#125;&#x27;</span>      -&gt;  是字符串   是JSON格式<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">v5 = <span class="hljs-string">&#x27;&#123;&quot;k1&quot;:123,&quot;k2&quot;:456,&quot;k3&quot;:(11,22,33)&#125;&#x27;</span>      -&gt;  是字符串   不是JSON格式<br>v4 = <span class="hljs-string">&#x27;&#123;&quot;k1&quot;:123,&quot;k2&quot;:456,&quot;k3&quot;:[11,22,33]&#125;&#x27;</span>      -&gt;  是字符串   是JSON格式<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br>data_dict = &#123;<span class="hljs-string">&quot;k1&quot;</span>: <span class="hljs-number">123</span>, <span class="hljs-string">&quot;k2&quot;</span>: <span class="hljs-number">456</span>, <span class="hljs-string">&#x27;k3&#x27;</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">&#x27;k4&#x27;</span>: (<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">33</span>)&#125;<br>data_string = json.dumps(data_dict)<br><span class="hljs-built_in">print</span>(data_string)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br>data_string = <span class="hljs-string">&#x27;&#123;&quot;k1&quot;:123,&quot;k2&quot;:456&#125;&#x27;</span><br>v1 = json.loads(data_string)<br><span class="hljs-built_in">print</span>(v1)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>json无法序列化所有的数据类型。</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc"><br><span class="hljs-code">+-------------------+</span>---------------+<br><span class="hljs-section">| Python            | JSON          |</span><br><span class="hljs-section">+===================+===============+</span><br><span class="hljs-section">| dict              | object        |</span><br><span class="hljs-section">+-------------------+---------------+</span><br><span class="hljs-section">| list, tuple       | array         |</span><br><span class="hljs-section">+-------------------+---------------+</span><br><span class="hljs-section">| str               | string        |</span><br><span class="hljs-section">+-------------------+---------------+</span><br><span class="hljs-section">| int, float        | number        |</span><br><span class="hljs-section">+-------------------+---------------+</span><br><span class="hljs-section">| True              | true          |</span><br><span class="hljs-section">+-------------------+---------------+</span><br><span class="hljs-section">| False             | false         |</span><br><span class="hljs-section">+-------------------+---------------+</span><br><span class="hljs-section">| None              | null          |</span><br><span class="hljs-section">+-------------------+---------------+</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br><span class="hljs-keyword">import</span> datetime<br><br>ctime = datetime.datetime.now()<br>ctime_string = ctime.strftime(<span class="hljs-string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>)<br><br>data_dict = &#123;<span class="hljs-string">&quot;k1&quot;</span>: <span class="hljs-number">123</span>, <span class="hljs-string">&quot;k2&quot;</span>: ctime_string&#125;<br><br>v1 = json.dumps(data_dict)<br><span class="hljs-built_in">print</span>(v1)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="案例：爬虫小案例"><a href="#案例：爬虫小案例" class="headerlink" title="案例：爬虫小案例"></a>案例：爬虫小案例</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> json<br><br><span class="hljs-comment"># 返回的很多的内容</span><br>res = requests.get(<span class="hljs-string">&quot;https://api.luffycity.com/api/v1/course/actual/?limit=12&amp;offset=0&amp;category_id=9999&quot;</span>)<br><br><span class="hljs-comment"># 获取字符串类型 JSON格式字符串</span><br><span class="hljs-built_in">print</span>(res.text)<br><br><span class="hljs-comment"># 将从其他网站拿到的JSON字符串转换成Python的数据类型</span><br>data_dict = json.loads(res.text)<br><span class="hljs-built_in">print</span>(data_dict)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="案例：网站"><a href="#案例：网站" class="headerlink" title="案例：网站"></a>案例：网站</h4><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">pip3</span>.<span class="hljs-number">9</span> install flask<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br><br>app = Flask(__name__)<br><br><br><span class="hljs-comment"># http://127.0.0.1:5000/login</span><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&quot;/login&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">login</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;登录&quot;</span><br><br><br><span class="hljs-comment"># http://127.0.0.1:5000/users</span><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&quot;/users&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">users</span>():<br>    data_dict = &#123;<span class="hljs-string">&quot;code&quot;</span>: <span class="hljs-number">0</span>, <span class="hljs-string">&quot;data&quot;</span>: [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">33</span>, <span class="hljs-number">44</span>]&#125;<br>    <span class="hljs-keyword">return</span> json.dumps(data_dict)<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    app.run()<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-3-os模块"><a href="#3-3-os模块" class="headerlink" title="3.3 os模块"></a>3.3 os模块</h3><ul>
+<li><p>绝对路径</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br><span class="hljs-comment"># /Users/wupeiqi/PycharmProjects/day03/db.txt</span><br>v1 = os.path.abspath(<span class="hljs-string">&quot;db.txt&quot;</span>)<br><span class="hljs-built_in">print</span>(v1)<br><br>v2 = os.path.abspath(__file__)<br><span class="hljs-built_in">print</span>(v2)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>路径的拼接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br><span class="hljs-comment"># mac</span><br><span class="hljs-comment"># file_path = &quot;files/account.txt&quot;</span><br><br><span class="hljs-comment"># win</span><br><span class="hljs-comment"># file_path = r&quot;files\naccount.txt&quot;</span><br><br><span class="hljs-comment"># 路径拼接</span><br>file_path = os.path.join(<span class="hljs-string">&quot;files&quot;</span>, <span class="hljs-string">&quot;xx&quot;</span>, <span class="hljs-string">&quot;fff&quot;</span>, <span class="hljs-string">&quot;account.txt&quot;</span>)<br><span class="hljs-built_in">print</span>(file_path)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>文件&#x2F;文件夹是否存在</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br>file_path_1 = os.path.join(<span class="hljs-string">&quot;files&quot;</span>, <span class="hljs-string">&quot;account.txt&quot;</span>)<br>file_path_2 = os.path.join(<span class="hljs-string">&quot;files&quot;</span>, <span class="hljs-string">&quot;xx&quot;</span>, <span class="hljs-string">&quot;fff&quot;</span>, <span class="hljs-string">&quot;account.txt&quot;</span>)<br><br>v1 = os.path.exists(file_path_1) <span class="hljs-comment"># True/False</span><br><span class="hljs-built_in">print</span>(v1)<br><br>v2 = os.path.exists(file_path_2) <span class="hljs-comment"># True/False</span><br><span class="hljs-built_in">print</span>(v2)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>创建文件夹</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br>folder_path = os.path.join(<span class="hljs-string">&quot;file&quot;</span>, <span class="hljs-string">&quot;db&quot;</span>, <span class="hljs-string">&quot;work&quot;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(folder_path):<br>    os.makedirs(folder_path)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>案例：用户注册的功能，为每个用户创建一个文件，文件名&#x3D;用户名，内容：写密码。所有的数据要放在db目录下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    <span class="hljs-comment"># 1.输入用户名和密码</span><br>    user = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;用户名：&quot;</span>)<br>    pwd = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;密码：&quot;</span>)<br><br>    <span class="hljs-comment"># 2.先创建文件夹</span><br>    folder_path = os.path.abspath(<span class="hljs-string">&quot;db&quot;</span>)<br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(folder_path):<br>        os.makedirs(folder_path)<br><br>    <span class="hljs-comment"># 3.在目录下写内容</span><br>    <span class="hljs-comment">#    r，读模块</span><br>    <span class="hljs-comment">#    a，追加模式（文件不存在，则创建）</span><br>    <span class="hljs-comment">#    w，写模式，源文件清空，再写入。</span><br>    file_path = os.path.join(folder_path, <span class="hljs-string">&quot;&#123;&#125;.txt&quot;</span>.<span class="hljs-built_in">format</span>(user))<br>    file_object = <span class="hljs-built_in">open</span>(file_path, mode=<span class="hljs-string">&quot;w&quot;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>    <span class="hljs-comment"># 写内容</span><br>    file_object.write(pwd)<br><br>    <span class="hljs-comment"># 关闭文件</span><br>    file_object.close()<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    run()<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>os.listdir，查看你目录下都有哪些文件，找1级</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br><span class="hljs-comment"># name_list = os.listdir(&quot;/Users/wupeiqi/PycharmProjects/day03/db&quot;)</span><br><span class="hljs-comment"># print(name_list)</span><br><span class="hljs-comment"># [&#x27;wupeiqi.txt&#x27;, &#x27;root.txt&#x27;]</span><br><br><br>name_list = os.listdir(<span class="hljs-string">&quot;/Users/wupeiqi/PycharmProjects/mtb/mtb&quot;</span>)<br><span class="hljs-built_in">print</span>(name_list)<br><br><span class="hljs-comment"># [&#x27;asgi.py&#x27;, &#x27;__init__.py&#x27;, &#x27;__pycache__&#x27;, &#x27;local_settings.py&#x27;, &#x27;celery.py&#x27;, &#x27;settings.py&#x27;, &#x27;urls.py&#x27;, &#x27;wsgi.py&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>os.walk，查看你目录下都有哪些文件，找遍所有角落。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br>obj = os.walk(<span class="hljs-string">&quot;/Users/wupeiqi/PycharmProjects/mtb/amazon&quot;</span>)<br><br><span class="hljs-keyword">for</span> in_folder, b, file_list <span class="hljs-keyword">in</span> obj:<br>    <span class="hljs-comment"># a=/Users/wupeiqi/PycharmProjects/mtb/mtb/__pycache__  进入那个目录</span><br>    <span class="hljs-comment"># b=[&#x27;__pycache__&#x27;]   目录下所有的文件夹</span><br>    <span class="hljs-comment"># c=[&#x27;asgi.py&#x27;, &#x27;__init__.py&#x27;, &#x27;local_settings.py&#x27;, &#x27;celery.py&#x27;, &#x27;settings.py&#x27;, &#x27;urls.py&#x27;, &#x27;wsgi.py&#x27;]  目录下面所有的文件</span><br>    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> file_list:<br>        file_abs_path = os.path.join(in_folder, name)<br>        <span class="hljs-built_in">print</span>(file_abs_path)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><br>obj = os.walk(<span class="hljs-string">&quot;/Users/wupeiqi/PycharmProjects/mtb/amazon&quot;</span>)<br><br><span class="hljs-keyword">for</span> in_folder, b, file_list <span class="hljs-keyword">in</span> obj:<br>    <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> file_list:<br>        <span class="hljs-comment"># xxxxx.txt</span><br>        <span class="hljs-comment"># xxxxx.png</span><br>        ext = name.split(<span class="hljs-string">&quot;.&quot;</span>)[-<span class="hljs-number">1</span>]<br>        <span class="hljs-keyword">if</span> ext == <span class="hljs-string">&quot;pyc&quot;</span>:<br>            file_abs_path = os.path.join(in_folder, name)<br>            <span class="hljs-built_in">print</span>(file_abs_path)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-4-random"><a href="#3-4-random" class="headerlink" title="3.4 random"></a>3.4 random</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><br>v1 = random.randint(<span class="hljs-number">100000</span>, <span class="hljs-number">999999</span>)<br><span class="hljs-built_in">print</span>(v1)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><br>num_list = [<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">33</span>, <span class="hljs-number">44</span>]<br><br>num = random.choice(num_list)<br><span class="hljs-built_in">print</span>(num)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f1</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;f1&quot;</span>)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f2</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;f2&quot;</span>)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f3</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;f3&quot;</span>)<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">f4</span>():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;f4&quot;</span>)<br><br><br>num_list = [f1, f2, f3, f4]<br><br>func = random.choice(num_list)<br><br>func()<br></code></pre></td></tr></table></figure>
+
+<p>注意：用处比较大。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><br>num_list = [<span class="hljs-number">99</span>, <span class="hljs-number">11</span>, <span class="hljs-number">8</span>, <span class="hljs-number">22</span>, <span class="hljs-number">18</span>, <span class="hljs-number">33</span>, <span class="hljs-number">44</span>]<br>random.shuffle(num_list)<br><span class="hljs-built_in">print</span>(num_list)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>案例：扑克牌+抽牌。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> random<br><br>color_list = [<span class="hljs-string">&quot;黑桃&quot;</span>, <span class="hljs-string">&quot;红桃&quot;</span>, <span class="hljs-string">&quot;梅花&quot;</span>, <span class="hljs-string">&quot;方片&quot;</span>]<br>num_list = <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">14</span>)  <span class="hljs-comment"># [1,2,3,4..13]</span><br><br><span class="hljs-comment"># poke_list = [ (&quot;黑桃&quot;,1),(&quot;黑桃&quot;,2),(&quot;黑桃&quot;,13) ]</span><br>poke_list = []<br><span class="hljs-keyword">for</span> color <span class="hljs-keyword">in</span> color_list:<br>    <span class="hljs-comment"># color = &quot;黑桃&quot;</span><br>    <span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> num_list:<br>        <span class="hljs-comment"># num=1 /2/34...13</span><br>        group = (color, num)<br>        poke_list.append(group)<br><br><span class="hljs-comment"># 打乱顺序</span><br>random.shuffle(poke_list)<br><br><span class="hljs-comment"># 抽牌</span><br>data = random.choice(poke_list)<br><span class="hljs-built_in">print</span>(data)<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-5-时间相关"><a href="#3-5-时间相关" class="headerlink" title="3.5 时间相关"></a>3.5 时间相关</h3><ul>
+<li>time</li>
+<li>datetime</li>
+</ul>
+<h4 id="3-5-1-time"><a href="#3-5-1-time" class="headerlink" title="3.5.1 time"></a>3.5.1 time</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> time<br><br><span class="hljs-comment"># 时间戳</span><br>v1 = time.time()<br><span class="hljs-built_in">print</span>(v1)<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> time<br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-number">123</span>)<br>    <span class="hljs-comment"># 时间停止</span><br>    time.sleep(<span class="hljs-number">5</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-5-2-datetime"><a href="#3-5-2-datetime" class="headerlink" title="3.5.2 datetime"></a>3.5.2 datetime</h4><ul>
+<li><p>datetime对象的形式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<br><br><span class="hljs-comment"># 本地时间</span><br>v1 = datetime.datetime.now()<br><span class="hljs-built_in">print</span>(v1)<br><br>tz = datetime.timezone(datetime.timedelta(hours=<span class="hljs-number">7</span>))<br>v2 = datetime.datetime.now(tz)<br><span class="hljs-built_in">print</span>(v2)<br><br>v3 = datetime.datetime.utcnow()<br><span class="hljs-built_in">print</span>(v3)<br></code></pre></td></tr></table></figure>
+
+<p>有点，方便实现时间的加减</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, timedelta<br><br><span class="hljs-comment"># 本地时间</span><br>v1 = datetime.now()<br><span class="hljs-built_in">print</span>(v1)<br><br>v2 = v1 + timedelta(days=<span class="hljs-number">527</span>,hours=<span class="hljs-number">19</span>)<br><span class="hljs-built_in">print</span>(v2)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>字符串的形式</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">v1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;2022-04-14 19:18:17&quot;</span><br><span class="hljs-attribute">v1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;2022-04-14&quot;</span><br><span class="hljs-attribute">v1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;2022年04月14日&quot;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>时间之间的相互转换：</p>
+<ul>
+<li><p>datateime -&gt;  字符串类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, timedelta<br><br><span class="hljs-comment"># 本地时间</span><br>v1 = datetime.now()<br><span class="hljs-built_in">print</span>(v1)<br><br><span class="hljs-comment"># datetime对象转换成为字符串</span><br>v2 = v1.strftime(<span class="hljs-string">&quot;%Y年%m%d%H%M%S&quot;</span>)<br><br><span class="hljs-built_in">print</span>(v2, <span class="hljs-built_in">type</span>(v2))<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>字符串 -&gt;  datetime类型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime, timedelta<br><br>v1 = <span class="hljs-string">&quot;2022-04-14&quot;</span><br><br>v2 = datetime.strptime(v1, <span class="hljs-string">&quot;%Y-%m-%d&quot;</span>)<br><br>v3 = v2 + timedelta(days=<span class="hljs-number">10</span>)<br><span class="hljs-built_in">print</span>(v3)<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h4><ol>
+<li><p>提示用户输入手机号，记录入网时间（当前时间），把输入写入到文件（a模式）。 </p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">15566666666</span>,<span class="hljs-number">2022</span>-<span class="hljs-number">04</span>-<span class="hljs-number">14</span><br><span class="hljs-attribute">15566666666</span>,<span class="hljs-number">2022</span>-<span class="hljs-number">04</span>-<span class="hljs-number">14</span><br><span class="hljs-attribute">15566666666</span>,<span class="hljs-number">2022</span>-<span class="hljs-number">04</span>-<span class="hljs-number">14</span><br><span class="hljs-attribute">15566666666</span>,<span class="hljs-number">2022</span>-<span class="hljs-number">04</span>-<span class="hljs-number">14</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    phone = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;手机号：&quot;</span>)<br>    ctime_string = datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d&quot;</span>)<br><br>    line = <span class="hljs-string">&quot;&#123;&#125;,&#123;&#125;\n&quot;</span>.<span class="hljs-built_in">format</span>(phone, ctime_string)<br><br>    <span class="hljs-comment"># 打开文件并追加到里面</span><br>    f = <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;data.txt&quot;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, mode=<span class="hljs-string">&#x27;a&#x27;</span>)<br>    f.write(line)<br>    f.close()<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    run()<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>文件夹操作</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs dns">让用户去注册，每天一个文件。<br><br>设计思路：database<br>	<span class="hljs-number">20220414</span>.txt<br>	<span class="hljs-number">20220415</span>.txt<br>	<span class="hljs-number">20220416</span>.txt<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> datetime <span class="hljs-keyword">import</span> datetime<br><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    phone = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;手机号：&quot;</span>)<br>    ctime_string = datetime.now().strftime(<span class="hljs-string">&quot;%Y-%m-%d&quot;</span>)<br><br>    file_path = os.path.join(<span class="hljs-string">&quot;database&quot;</span>, <span class="hljs-string">&quot;&#123;&#125;.txt&quot;</span>.<span class="hljs-built_in">format</span>(ctime_string))<br><br>    f = <span class="hljs-built_in">open</span>(file_path, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, mode=<span class="hljs-string">&#x27;a&#x27;</span>)<br>    f.write(phone + <span class="hljs-string">&quot;\n&quot;</span>)<br>    f.close()<br><br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    run()<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3-6-ini格式"><a href="#3-6-ini格式" class="headerlink" title="3.6 ini格式"></a>3.6 ini格式</h3><p>my.ini</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[mysqld]</span><br><span class="hljs-attr">datadir</span>=/var/lib/mysql<br><span class="hljs-attr">socket</span>=/var/lib/mysql/mysql.sock<br><span class="hljs-attr">log-bin</span>=py-mysql-bin<br><span class="hljs-attr">character-set-server</span>=utf8<br><span class="hljs-attr">collation-server</span>=utf8_general_ci<br><span class="hljs-attr">log-error</span>=/var/log/mysqld.log<br><span class="hljs-comment"># Disabling symbolic-links is recommended to prevent assorted security risks</span><br><span class="hljs-attr">symbolic-links</span>=<span class="hljs-number">0</span><br><br><span class="hljs-section">[mysqld_safe]</span><br><span class="hljs-attr">log-error</span>=/var/log/mariadb/mariadb.log<br><span class="hljs-attr">pid-file</span>=/var/run/mariadb/mariadb.pid<br><br><span class="hljs-section">[client]</span><br><span class="hljs-attr">default-character-set</span>=utf8<br></code></pre></td></tr></table></figure>
+
+
+
+<p>读取数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> configparser<br><br><span class="hljs-comment"># 自动会文件的内容进行解析</span><br>parser = configparser.ConfigParser()<br>parser.read(<span class="hljs-string">&quot;my.ini&quot;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br><br><span class="hljs-comment"># v1 = parser.sections()</span><br><span class="hljs-comment"># print(v1)  # [&#x27;mysqld&#x27;, &#x27;mysqld_safe&#x27;, &#x27;client&#x27;]</span><br><span class="hljs-comment">#</span><br><span class="hljs-comment"># v2 = parser.items(&quot;mysqld_safe&quot;)</span><br><span class="hljs-comment"># for k, v in v2:</span><br><span class="hljs-comment">#     print(k, v)</span><br><br>v3 = parser.get(<span class="hljs-string">&quot;mysqld&quot;</span>,<span class="hljs-string">&quot;socket&quot;</span>)<br><span class="hljs-built_in">print</span>(v3)<br></code></pre></td></tr></table></figure>
+
+
+
+<p>删除</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> configparser<br><br><span class="hljs-comment"># 自动会文件的内容进行解析</span><br>parser = configparser.ConfigParser()<br>parser.read(<span class="hljs-string">&quot;my.ini&quot;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br><br><span class="hljs-comment"># 内存删除</span><br><span class="hljs-comment"># parser.remove_option(&quot;mysqld&quot;, &quot;socket&quot;)</span><br>parser.remove_section(<span class="hljs-string">&quot;mysqld_safe&quot;</span>)<br><br>parser.write(<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;my.ini&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, mode=<span class="hljs-string">&#x27;w&#x27;</span>))<br></code></pre></td></tr></table></figure>
+
+
+
+<p>修改或者添加</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> configparser<br><br><span class="hljs-comment"># 自动会文件的内容进行解析</span><br>parser = configparser.ConfigParser()<br>parser.read(<span class="hljs-string">&quot;my.ini&quot;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>)<br><br>parser.add_section(<span class="hljs-string">&quot;group&quot;</span>)<br>parser.<span class="hljs-built_in">set</span>(<span class="hljs-string">&quot;group&quot;</span>, <span class="hljs-string">&quot;datadir&quot;</span>, <span class="hljs-string">&quot;xxxxx&quot;</span>)<br><br>parser.write(<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;my.ini&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>, mode=<span class="hljs-string">&#x27;w&#x27;</span>))<br></code></pre></td></tr></table></figure>
+
+
+
+<p>以后开发时，可以把它当成我们项目的配置文件。</p>
+<p><img src="/assets/image-20220414151636581.png" srcset="/img/loading.gif" lazyload alt="image-20220414151636581"></p>
+<h3 id="3-7-正则表达式"><a href="#3-7-正则表达式" class="headerlink" title="3.7 正则表达式"></a>3.7 正则表达式</h3><ul>
+<li>正则表达式</li>
+<li>re模块</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太手机号也可18731255799牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br><br><span class="hljs-comment"># 提取文本中手机号</span><br><span class="hljs-comment"># 表示手机号：1[3|5|8|9]\d&#123;9&#125;</span><br>data = re.findall(<span class="hljs-string">&quot;1[3|5|8|9]\d&#123;9&#125;&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data)<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-7-1-字符相关"><a href="#3-7-1-字符相关" class="headerlink" title="3.7.1 字符相关"></a>3.7.1 字符相关</h4><ul>
+<li><p><code>wupeiqi</code> 匹配文本中的wupeiqi</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;你好wupeiqi,阿斯顿发wupeiqasd 阿士大夫能接受的wupeiqiff&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;wupeiqi&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;wupeiqi&#x27;, &#x27;wupeiqi&#x27;] 可用于计算字符串中某个字符出现的次数</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;你好wupeiqi,阿斯顿发wupeiqasd 阿士大夫能接受的wupeiqiff&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;wupeiqi&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;wupeiqi&#x27;, &#x27;wupeiqi&#x27;] 可用于计算字符串中某个字符出现的次数</span><br></code></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><code>[abc]</code> 匹配a或b或c 字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;你2b好wupeiqi,阿斯顿发awupeiqasd 阿士大夫a能接受的wffbbupqaceiqiff&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;[abc]&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;b&#x27;, &#x27;a&#x27;, &#x27;a&#x27;, &#x27;a&#x27;, &#x27;b&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;你2b好wupeiqi,阿斯顿发awupeiqasd 阿士大夫a能接受的wffbbupqcceiqiff&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;q[abc]&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;qa&#x27;, &#x27;qc&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>[^abc]</code> 匹配除了abc意外的其他字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;你wffbbupceiqiff&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;[^abc]&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;你&#x27;, &#x27;w&#x27;, &#x27;f&#x27;, &#x27;f&#x27;, &#x27;u&#x27;, &#x27;p&#x27;, &#x27;e&#x27;, &#x27;i&#x27;, &#x27;q&#x27;, &#x27;i&#x27;, &#x27;f&#x27;, &#x27;f&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>[a-z]</code>  匹配a~z的任意字符（ [0-9]也可以 ）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;alexrootrootadmin&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;t[a-z]&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;tr&#x27;, &#x27;ta&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>.</code>  代指除换行符以外的任意字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;alexraotrootadmir9on&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;r.o&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;rao&#x27;, &#x27;roo&#x27;,&quot;r9o&quot;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;alexraotrootadmin&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;r.+o&quot;</span>, text) <span class="hljs-comment"># 贪婪匹配</span><br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;raotroo&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;alexraotrootadmin&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;r.+?o&quot;</span>, text) <span class="hljs-comment"># 非贪婪匹配</span><br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;rao&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>\w</code> 代指字母或数字或下划线（汉字）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;北京武沛alex齐北  京武沛alex齐&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;武\wa&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&quot;武沛a&quot;,&quot;武沛a&quot;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;北京武沛alex齐北  京武沛alex齐&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;武\w+x&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;武沛alex&#x27;, &#x27;武沛alex&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>\d</code> 代指数字</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;root-ad32min-add3-admd1in&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;d\d&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;d3&#x27;, &#x27;d3&#x27;, &#x27;d1&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;root-ad32min-add3-admd1in&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;d\d+&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;d32&#x27;, &#x27;d3&#x27;, &#x27;d1&#x27;]</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>关于正则表达式中的字符（默认情况下只能代表1个）：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs css">固定，例如：<span class="hljs-selector-tag">a</span>、<span class="hljs-selector-tag">b</span>、c<br>范围，例如：<span class="hljs-selector-attr">[a-z]</span>  <span class="hljs-selector-attr">[0-9]</span>  <span class="hljs-selector-attr">[A-Z]</span><br>数字，例如：\d<br>字母或数字或下划线（汉字），例如：\w<br>所有，例如：. <br></code></pre></td></tr></table></figure>
+
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livescript">表示:<br>	<span class="hljs-number">10</span>个数字       <span class="hljs-string">\d\d\d\d\d\d\d\d\d\d</span><br>	<span class="hljs-number">10</span>个数字      <span class="hljs-string">\d&#123;10&#125;</span><br>	<span class="hljs-number">1</span>个或n个数字   <span class="hljs-string">\d+</span><br>	<span class="hljs-number">0</span>个<span class="hljs-number">1</span>个数字     <span class="hljs-string">\d?</span><br>	任意个数字     <span class="hljs-string">\d*</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="3-7-2-个数"><a href="#3-7-2-个数" class="headerlink" title="3.7.2 个数"></a>3.7.2 个数</h4><ul>
+<li><p><code>*</code> 重复0次或更多次</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;他是大B个，确实是个大2B。大22B。大29B。&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;大2*B&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;大B&#x27;, &#x27;大2B&#x27;, &#x27;大22B&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;他是大B个，确实是个大2B。大22B。大29B。&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;大\d*B&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;大B&#x27;, &#x27;大2B&#x27;, &#x27;大22B&#x27;, &#x27;大29B&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>+</code> 重复1次或更多次</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;他是大B个，确实是个大2B，大3B，大66666B。&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;大\d+B&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;大2B&#x27;, &#x27;大3B&#x27;, &#x27;大66666B&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>?</code> 重复0次或1次</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;他是大B个，确实是个大2B，大3B，大66666B。&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;大\d?B&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;大B&#x27;, &#x27;大2B&#x27;, &#x27;大3B&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>&#123;n&#125;</code> 重复n次</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;151312\d&#123;5&#125;&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;15131255789&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>&#123;n,&#125;</code> 重复n次或更多次</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;\d&#123;9,&#125;&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;442662578&#x27;, &#x27;15131255789&#x27;]</span><br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>&#123;n,m&#125;</code> 重复n到m次</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;\d&#123;10,15&#125;&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;15131255789&#x27;]</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<p>关于数量：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown">?<br><span class="hljs-bullet">+</span><br><span class="hljs-bullet">*</span><br>&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-7-3-贪婪匹配"><a href="#3-7-3-贪婪匹配" class="headerlink" title="3.7.3 贪婪匹配"></a>3.7.3 贪婪匹配</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;alexraotrootadmin&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;r.+o&quot;</span>, text) <span class="hljs-comment"># 贪婪匹配</span><br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;raotroo&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;alexraotrootadmin&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;r.+?o&quot;</span>, text)  <span class="hljs-comment"># 非贪婪匹配</span><br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;rao&#x27;, &#x27;roo&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-7-4-分组"><a href="#3-7-4-分组" class="headerlink" title="3.7.4 分组"></a>3.7.4 分组</h4><ul>
+<li><p>提取区域</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;15131(2\d&#123;5&#125;)&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;255789&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;15(1\d)1(2\d&#123;5&#125;)&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [(&#x27;13&#x27;, &#x27;255789&#x27;)]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;(15(1\d)1(2\d&#123;5&#125;))&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [(&#x27;15131255789&#x27;, &#x27;13&#x27;, &#x27;255789&#x27;)]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>或 + 提取数据区域</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主15131root太牛15131alex逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br><span class="hljs-comment"># 151312\d&#123;5&#125;</span><br><span class="hljs-comment"># 15131r\w+太</span><br>data_list = re.findall(<span class="hljs-string">&quot;15131(2\d&#123;5&#125;|r\w+太)&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;root太&#x27;, &#x27;255789&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主15131root太牛15131alex逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br><span class="hljs-comment"># 151312\d&#123;5&#125;</span><br><span class="hljs-comment"># 15131r\w+太</span><br>data_list = re.findall(<span class="hljs-string">&quot;(15131(2\d&#123;5&#125;|r\w+太))&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [(&#x27;15131root太&#x27;, &#x27;root太&#x27;), (&#x27;15131255789&#x27;, &#x27;255789&#x27;)]</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="案例-2"><a href="#案例-2" class="headerlink" title="案例"></a>案例</h4><ol>
+<li><p>利用正则匹配QQ号码</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-string">[1-9]</span>\d&#123;<span class="hljs-number">4</span>,&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>身份证号码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;dsf130429191912015219k13042919591219521Xkk&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;\d&#123;17&#125;[\dX]&quot;</span>, text) <span class="hljs-comment"># [abc]</span><br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;130429191912015219&#x27;, &#x27;13042919591219521X&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;dsf130429191912015219k13042919591219521Xkk&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;\d&#123;17&#125;(\d|X)&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [&#x27;9&#x27;, &#x27;X&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;dsf130429191912015219k13042919591219521Xkk&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;(\d&#123;17&#125;(\d|X))&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list) <span class="hljs-comment"># [(&#x27;130429191912015219&#x27;, &#x27;9&#x27;), (&#x27;13042919591219521X&#x27;, &#x27;X&#x27;)]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;dsf130429191912015219k13042919591219521Xkk&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;\d&#123;6&#125;(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)\d&#123;3&#125;[\d|X]&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [(&#x27;1919&#x27;, &#x27;12&#x27;, &#x27;01&#x27;), (&#x27;1959&#x27;, &#x27;12&#x27;, &#x27;19&#x27;)]</span><br><br><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;dsf130429191912015219k13042919591219521Xkk&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;(\d&#123;6&#125;(\d&#123;4&#125;)(\d&#123;2&#125;)(\d&#123;2&#125;)\d&#123;3&#125;[\d|X])&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)<br><span class="hljs-comment"># [(&#x27;130429191912015219&#x27;, &#x27;1919&#x27;, &#x27;12&#x27;, &#x27;01&#x27;), (&#x27;13042919591219521X&#x27;, &#x27;1959&#x27;, &#x27;12&#x27;, &#x27;19&#x27;)]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>手机号</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;我的手机哈是15133377892，你的手机号是1171123啊？&quot;</span><br>data_list = re.findall(<span class="hljs-string">&quot;1[3-9]\d&#123;9&#125;&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data_list)  <span class="hljs-comment"># [&#x27;15133377892&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>邮箱地址</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>email_list = re.findall(<span class="hljs-string">&quot;\w+@\w+\.\w+&quot;</span>,text)<br><span class="hljs-built_in">print</span>(email_list) <span class="hljs-comment"># [&#x27;442662578@qq.com和xxxxx&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>email_list = re.findall(<span class="hljs-string">&quot;[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+&quot;</span>, text)<br><span class="hljs-built_in">print</span>(email_list) <span class="hljs-comment"># [&#x27;442662578@qq.com&#x27;, &#x27;xxxxx@live.com&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>email_list = re.findall(<span class="hljs-string">&quot;\w+@\w+\.\w+&quot;</span>, text, re.ASCII)<br><span class="hljs-built_in">print</span>(email_list)  <span class="hljs-comment"># [&#x27;442662578@qq.com&#x27;, &#x27;xxxxx@live.com&#x27;]</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛44266-2578@qq.com逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>email_list = re.findall(<span class="hljs-string">&quot;(\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*)&quot;</span>, text, re.ASCII)<br><span class="hljs-built_in">print</span>(email_list)  <span class="hljs-comment"># [(&#x27;44266-2578@qq.com&#x27;, &#x27;-2578&#x27;, &#x27;&#x27;, &#x27;&#x27;), (&#x27;xxxxx@live.com&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)]</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="3-7-5-re模块"><a href="#3-7-5-re模块" class="headerlink" title="3.7.5 re模块"></a>3.7.5 re模块</h4><ul>
+<li><p>findall</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;楼主太牛逼了，在线想要 442662578@qq.com和xxxxx@live.com谢谢楼主，手机号也可15131255789，搞起来呀&quot;</span><br>email_list = re.findall(<span class="hljs-string">&quot;[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+&quot;</span>, text)<br><span class="hljs-built_in">print</span>(email_list) <span class="hljs-comment"># [&#x27;442662578@qq.com&#x27;, &#x27;xxxxx@live.com&#x27;]</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>match，从文本的开头进行匹配</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;大小逗2B最逗3B欢乐&quot;</span><br>data = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">&quot;逗\dB&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data) <span class="hljs-comment"># None</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;逗2B最逗3B欢乐&quot;</span><br>data = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">&quot;逗\dB&quot;</span>, text)<br><span class="hljs-built_in">print</span>(data) <span class="hljs-comment"># 对象</span><br>v1 = data.group()<br><span class="hljs-built_in">print</span>(v1)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>search，通篇去匹配，只获取匹配成功的第一个</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-string">&quot;大小逗2B最逗3B欢乐&quot;</span><br>data = re.search(<span class="hljs-string">&quot;逗\dB&quot;</span>, text)<br><span class="hljs-keyword">if</span> data:<br>    <span class="hljs-built_in">print</span>(data.group())<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="3-7-6-校验"><a href="#3-7-6-校验" class="headerlink" title="3.7.6 校验"></a>3.7.6 校验</h4><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gams">起始符 ^<br>终止符 <span class="hljs-symbol">$</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> re<br><br>text = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;请输入手机号：&quot;</span>)<br><br>mtc = re.<span class="hljs-keyword">match</span>(<span class="hljs-string">&quot;^1[3-9]\d&#123;9&#125;$&quot;</span>, text)<br><span class="hljs-keyword">if</span> mtc:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;格式正确&quot;</span>, text)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;格式错误&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>http://example.com/2023/06/07/武沛齐python/day03 模块/day03 模块/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>XIN</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年6月7日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/06/07/%E6%AD%A6%E6%B2%9B%E9%BD%90python/day08%20Django%E5%9F%BA%E7%A1%80/day08%20Django%E5%9F%BA%E7%A1%80/" title="">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/06/07/%E6%AD%A6%E6%B2%9B%E9%BD%90python/day02%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%87%BD%E6%95%B0%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/day02%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%87%BD%E6%95%B0/" title="">
+                        <span class="hidden-mobile"></span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
